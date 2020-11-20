@@ -24,10 +24,10 @@ class DatabaseHelper {
 
   initDb() async {
     Directory documentDirectory = await getApplicationDocumentsDirectory();
-    String path = join(documentDirectory.path, "data_my_test_repo.db");
+    String path = join(documentDirectory.path, "mirochapk.db");
     //Only if path does not exist
     if (FileSystemEntity.typeSync(path) == FileSystemEntityType.notFound) {
-      ByteData data = await rootBundle.load(join('data', 'my_test_repo.db'));
+      ByteData data = await rootBundle.load(join('data', 'mirochapk.db'));
 
       List<int> bytes =
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);

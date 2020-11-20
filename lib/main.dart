@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MaterialApp(
-    title: 'Invoice App',
+    title: 'MiRoch',
     home: Login(),
   ));
 }
@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: _isLoading
               ? Center(child: CircularProgressIndicator())
@@ -51,14 +51,14 @@ class _LoginState extends State<Login> {
                       Text(
                         "Inicia sesión con tus datos",
                         style: TextStyle(
-                            color: Colors.black54,
-                            letterSpacing: 2.0,
+                            color: Colors.white,
+                            letterSpacing: 3.0,
                             fontWeight: FontWeight.bold),
                       ),
                       FormTextFieldComponent(
                         controller: emailController,
                         icon: Icons.email,
-                        hintText: "Ingresa tu email",
+                        hintText: "Ingresa tu Usuario",
                         isPassword: false,
                         onTap: (value) {
                           return validateEmail(value);
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                           },
                           child: Text(
                             "Ingresar",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ),

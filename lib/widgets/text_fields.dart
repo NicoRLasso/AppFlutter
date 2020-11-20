@@ -9,20 +9,25 @@ class FormTextFieldComponent extends StatelessWidget {
   final TextEditingController controller;
 
   //Constructor
-  FormTextFieldComponent({@required this.icon, @required this.hintText, @required this.isPassword ,@required this.onTap, @required this.controller});
+  FormTextFieldComponent(
+      {@required this.icon,
+      @required this.hintText,
+      @required this.isPassword,
+      @required this.onTap,
+      @required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10.0),
-      color: Colors.lightGreen,
+      color: Colors.white,
       margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Icon(
             icon,
-            color: Colors.white,
+            color: Colors.black,
           ),
           SizedBox(
             width: 10.0,
@@ -31,14 +36,12 @@ class FormTextFieldComponent extends StatelessWidget {
             child: TextFormField(
               controller: controller,
               obscureText: this.isPassword,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintStyle: TextStyle(color: Colors.black),
                   border: InputBorder.none,
                   hintText: hintText,
-                  fillColor: Colors.white
-
-              ),
+                  fillColor: Colors.black),
               validator: onTap,
             ),
           ),

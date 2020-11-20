@@ -10,12 +10,12 @@ class SideMenu extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           new UserAccountsDrawerHeader(
-            accountName: Text("Andrés Forero"),
-            accountEmail: Text("a@a.com"),
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("images/logo.png"), fit: BoxFit.cover),
+                  image: AssetImage("images/rochlogo.jpg"), fit: BoxFit.cover),
             ),
+            accountEmail: null,
+            accountName: null,
           ),
           new ListTile(
             title: Text("Módulo de clientes"),

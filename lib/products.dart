@@ -35,7 +35,7 @@ class _ProductListState extends State<ProductList> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Listado de productos"),
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.black,
       ),
       drawer: SideMenu(),
       body: _products.length > 0
